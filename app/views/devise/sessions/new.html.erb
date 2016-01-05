@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/assets/loginstyle.css">
+<div id="wrapper">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "login-form"}) do |f| %>
+      <div class="header">
+        <h1>Login Formu</h1>
+        <span></span>
+      </div>
+      <!--
+        <div class="content">
+          <input name="username" type="text" class="input username" placeholder="Username" />
+          <div class="user-icon"></div>
+          <input name="password" type="password" class="input password" placeholder="Password" />
+          <div class="pass-icon"></div>
+        </div>
+
+        <div class="footer">
+          <input type="submit" name="submit" value="Login" class="button" />
+          <input type="submit" name="submit" value="Register" class="register" />
+        </div>
+        -->
+
+      <div class="content">
+        <%= f.label :email %><br/>
+        <%= f.email_field :email, autofocus: true, placeholder: "Username", :class => "input username" %>
+        <div class="user-icon"></div>
+
+        <%= f.label :password %><br/>
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Password", :class => "input password" %>
+        <div class="pass-icon"></div>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+          <div class="content">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+      <% end -%>
+
+      <div class="footer">
+        <%= f.submit "Log in", :class => 'button' %>
+        <br/>
+        <br/>
+        <br/>
+        <%= render "devise/shared/links" %>
+      </div>
+  <% end %>
+
+
+</div>
+<div class="gradient"></div>

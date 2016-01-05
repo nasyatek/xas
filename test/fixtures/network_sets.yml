@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hostname: MyString
+  address: MyString
+  netmask: MyString
+  network: MyString
+  broadcast: MyString
+  gateway: MyString
+
+two:
+  hostname: MyString
+  address: MyString
+  netmask: MyString
+  network: MyString
+  broadcast: MyString
+  gateway: MyString

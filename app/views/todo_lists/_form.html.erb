@@ -1,0 +1,41 @@
+<section class="content invoice">
+  <div class="row">
+    <div class="col-md-10">
+      <%= form_for(@todo_list, :html => {:role => "form"}) do |f| %>
+          <% if @todo_list.errors.any? %>
+              <div class="alert alert-danger alert-dismissable" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                <h4><%= pluralize(@todo_list.errors.count, "error") %> prohibited this todo_list from being saved:</h4>
+
+                <ul>
+                  <% @todo_list.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+
+          <div class="form-group">
+            <%= f.label :note, t('menu.note') %>
+            <%= f.text_field :note, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :active, t('menu.active') %>
+            <%= f.check_box :active, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%
+               if @todo_list.persisted? ? buttonName=t('menu.update') : buttonName=t('menu.create')
+
+               end
+
+            %>
+            <%= f.submit buttonName, :class => "btn btn-primary" %>
+            <%= link_to welcome_dashboard_path, :class => 'btn btn-primary' do %>
+                <%= t('menu.back') %>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</section> 

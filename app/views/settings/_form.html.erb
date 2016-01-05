@@ -1,0 +1,39 @@
+<section class="content invoice">
+	<div class="row">
+		<div class="col-md-10">
+			<%= form_for(@setting, :html => { :role => "form" }) do |f| %>
+			<% if @setting.errors.any? %>
+			<div class="alert alert-danger alert-dismissable" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+					x
+				</button>
+				<h4><%= pluralize(@setting.errors.count, "error") %> prohibited this setting from being saved:</h4>
+
+				<ul>
+					<% @setting.errors.full_messages.each do |msg| %>
+					<li>
+						<%= msg %>
+					</li>
+					<% end %>
+				</ul>
+			</div>
+			<% end %>
+
+			<div class="form-group">
+				<%= f.label :name %>
+				<%= f.text_area :name, :class => "form-control" %>
+			</div>
+			<div class="form-group">
+				<%= f.label :value %>
+				<%= f.text_area :value, :class => "form-control" %>
+			</div>
+			<div class="form-group">
+				<%= f.submit t('menu.update'), :class => "btn btn-primary" %>
+				<%= link_to servers_path, :class => 'btn btn-primary' do %>
+				<%= t('menu.back') %>
+				<% end %>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</section>

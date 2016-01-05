@@ -1,0 +1,73 @@
+<!-- /.box -->
+<style>
+  .example-modal .modal {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    display: block;
+    z-index: 1;
+  }
+
+  .example-modal .modal {
+    background: transparent !important;
+  }
+</style>
+<div class="box">
+  <div class="box-header">
+    <h3 class="box-title"><%= t('global.alarms')%></h3>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+
+    <% if @alarms.empty? %>
+        <section class="content">
+          <div class="example-modal">
+            <div class="modal modal-info">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body" style="text-align: center; color: #00C0EF; font-size: 20px">
+                    <p><%= t('global.all_system_ok')%>&hellip;</p>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+          </div><!-- /.example-modal -->
+        </section>
+    <% else %>
+        <table id="example1" class="table table-bordered table-striped">
+          <thead>
+          <tr>
+            <th><%= t('global.celsius')%></th>
+            <th><%= t('global.fahrenheit')%></th>
+            <th><%= t('mailer.humidity')%></th>
+            <th><%= t('menu.status')%></th>
+            <th><%= t('global.date') %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @alarms.each do |a| %>
+              <tr>
+                <td><%= a.tempc %></td>
+                <td><%= a.tempf %></td>
+                <td><%= a.temph %></td>
+                <td><%= a.mark ? t('global.old') : t('global.new') %></td>
+                <td><%= a.created_at %></td>
+              </tr>
+          <% end %>
+          <tr>
+            <th><%= t('global.celsius')%></th>
+            <th><%= t('global.fahrenheit')%></th>
+            <th><%= t('mailer.humidity')%></th>
+            <th><%= t('menu.status')%></th>
+            <th><%= t('global.date')%></th>
+          </tr>
+          </tfoot>
+        </table>
+    <% end %>
+
+  </div>
+</div>
+<!-- /.box-body -->
+

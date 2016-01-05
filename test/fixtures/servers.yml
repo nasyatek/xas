@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip: MyText
+  hostname: MyText
+  status: false
+  note: MyText
+
+two:
+  ip: MyText
+  hostname: MyText
+  status: false
+  note: MyText

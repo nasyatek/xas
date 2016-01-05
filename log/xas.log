@@ -1,0 +1,27 @@
+I, [2015-12-26T16:32:03.182119 #20422]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:34:03.574162 #20618]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:35:31.505377 #20434]  INFO -- : XasSet CRONJOB controller/update_cronjob action : Cronjob will be change!
+I, [2015-12-26T16:35:31.505463 #20434]  INFO -- : XasSet CRONJOB controller/update_cronjob action : Parameter : TEMPERATURE Alarm Limit : 25 
+I, [2015-12-26T16:35:31.505482 #20434]  INFO -- : XasSet CRONJOB command output : Limit level will be change!
+I, [2015-12-26T16:35:31.893843 #20434]  INFO -- : *************    CRONJOB COMMAND OUTPUT : CronJob : Sensor Read Period : 2 minutes
+
+I, [2015-12-26T16:35:31.893934 #20434]  INFO -- : *************    CRONJOB COMMAND OUTPUT : CronJob : Daily Information
+
+I, [2015-12-26T16:35:31.893961 #20434]  INFO -- : *************    CRONJOB COMMAND OUTPUT : [write] crontab file updated
+
+I, [2015-12-26T16:35:31.896377 #20434]  INFO -- : XasSets controller/update_cronjob action : NEW CRONJOBS UPDATED
+I, [2015-12-26T16:36:02.709460 #20766]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:38:03.854245 #20874]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:40:02.749407 #21029]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:42:02.720837 #21128]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:44:03.610084 #21319]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:44:22.026556 #20434]  INFO -- : Welcome controller/monitor action : Xymon monitor window showing as a frame in monitor view
+I, [2015-12-26T16:44:41.310729 #20434]  INFO -- : Welcome controller/monitor action : Xymon monitor window showing as a frame in monitor view
+I, [2015-12-26T16:45:39.941445 #20434]  INFO -- : Welcome controller/alarms action : 0 get values from database as a new mark
+I, [2015-12-26T16:46:02.824559 #21459]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:48:02.714887 #21612]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:50:04.087807 #21779]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:52:03.675363 #22030]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:54:04.080468 #22167]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T16:56:02.999848 #22270]  INFO -- : SensorMailer mailer/sensor_cannot_read_email action : sent sensor parameters as a mail
+I, [2015-12-26T17:01:10.049924 #20434]  INFO -- : Welcome controller/read_sensor action : sensor read

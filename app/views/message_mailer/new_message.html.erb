@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NSY-XASPIAN : <%= t('mailer.daily_notification') %></title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 300px;
+      padding: 10px;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <br>
+  <p><strong>Gönderen:  <%= @message.name %></strong></p>
+</div>
+<br>
+<br>
+<div class="hum">
+  <p><%= @message.body %></p>
+</div>
+
+</body>
+</html>

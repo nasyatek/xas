@@ -1,0 +1,59 @@
+<% content_for :content_header do %>
+    <section class="content-header">
+      <!-- <h1>Listing
+         <small>network_sets</small>
+       </h1>--><br/>
+
+      <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i><%= t('side_menu.home') %></a></li>
+        <li class="active"><%= t('side_menu.network_setting') %></li>
+      </ol>
+    </section>
+<% end %>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-primary">
+        <div class="box-header">
+          <div class="box-tools pull-right">
+            <%= link_to new_network_set_path(@network_set), :class => 'btn btn-success' do %>
+                <%= t('side_menu.new_network_setting') %>
+            <% end %>
+          </div>
+        </div>
+        <div class="box-body table-responsive">
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th><%= t('menu.hostname') %></th>
+              <th><%= t('menu.address') %></th>
+              <th><%= t('menu.netmask') %></th>
+              <th><%= t('menu.network') %></th>
+              <th><%= t('menu.broadcast') %></th>
+              <th><%= t('menu.gateway') %></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <%= content_tag_for(:tr, @network_sets) do |network_set| %>
+                <td><%= network_set.hostname %></td>
+                <td><%= network_set.address %></td>
+                <td><%= network_set.netmask %></td>
+                <td><%= network_set.network %></td>
+                <td><%= network_set.broadcast %></td>
+                <td><%= network_set.gateway %></td>
+                <td><%= link_to '', network_set, :class => 'fa fa-eye' %></td>
+                <td><%= link_to '', edit_network_set_path(network_set), :class => 'fa fa-edit' %></td>
+                <td><%= link_to '', network_set, method: :delete, data: {confirm: 'Are you sure?'}, :class => 'fa fa-trash-o' %></td>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

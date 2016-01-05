@@ -1,0 +1,15 @@
+<% content_for :content_header do %>
+    <section class="content-header">
+   <!--<h1><%= t('side_menu.new') %>
+        <small><%= t('side_menu.server') %></small>
+      </h1> -->  <br />
+
+      <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> <%= t('side_menu.home') %></a></li>
+        <li><%= link_to t('side_menu.servers'), servers_path %></li>
+        <li class="active"><%= t('side_menu.new') %></li>
+      </ol>
+    </section>
+<% end %>
+
+<%= render 'form' %>

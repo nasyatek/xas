@@ -1,0 +1,59 @@
+Aşağıdaki satırı kurulum yaptığınız bilgisayarda ilgili kullanıcının profiline eklemeniz gerekiyor.
+export rvmsudo_secure_path=1
+
+DHT11 için dht-ffi gemi kullanılıyor.
+
+***************** SENSOR ******************
+Sensörlerin okuması için whenever gem kullanıldı. config altına schedule.rb dosyası ekliyor.
+$ cd /apps/my-great-project
+$ wheneverize .
+every 3.hours do
+  runner "MyModel.some_process"
+  rake "my:rake:task"
+  command "/usr/bin/my_great_command"
+end
+
+If your production environment uses RVM (Ruby Version Manager) you will run into a gotcha that causes your cron jobs to hang. This is not directly related to Whenever, and can be tricky to debug. Your .rvmrc files must be trusted or else the cron jobs will hang waiting for the file to be trusted. A solution is to disable the prompt by adding this line to your user rvm file in ~/.rvmrc
+
+rvm_trust_rvmrcs_flag=1
+
+This tells rvm to trust all rvmrc files.
+******************* UPTIME ****************
+Systemupdate  almak için;
+# <%= Time.now - IO.read('/proc/uptime').split[0].to_i %>
+
+XYMON KOMUTLARI (xymon komut satırı komutları) eklenebilir.
+
+
+linux komutları eklenebilir. (hostname değiştirme gibi)
+
+# RAKE TASK SCHEDULER
+whenever gem kurup, acpplication.rb içine path ekledikten sonra, otomatik oluşan dosya içine tasklarımızı yazabiliriz. Direk class yerine runner ya da rake içinde yapılan işleri
+yazmalıyız. Bu class lib içinde olmalı, runner ile bu sınıfı çağırmalıyız.
+
+
+
+raspian tips:
+1- Clone ile projeyi aldiktan sonra gemfile icinde dht_sensor gemini aktif et
+2- db:setup yap
+3- whenever --update-crontab   ile guncelle
+4- crontab -l   ile listeyi kontrol et
+5- Mail gelmiyorsa, cron.log dosyasina bak, eger normalse mail beklenen degerler $
+6- bazı durumlarda sunucuyu restart yapınca cronjob çalışıyor. Buna ileride bakacağım.
+
+mail_form
+1- mail_form gemi aktif edildi
+2- model ve controller oluşturuldu
+3- controller içinde mail gönderiminden sonra  redirect ile ana sayfaya gelindi
+4- message mailer ve template oluşturuldu
+5- mailer içinde hangi metot varsa, views/mailer içinde o metot ismiyle başlayan mailer.html.erb olmalıdır
+
+####################################
+1- Clone ile projeyi aldiktan sonra gemfile icinde dht_sensor gemini aktif et
+2- db:setup yap
+3- whenever --update-crontab   ile guncelle
+4- crontab -l   ile listeyi kontrol et
+5- Mail gelmiyorsa, cron.log dosyasina bak, eger normalse mail beklenen degerle$
+6- Bazi durumlarda sunucuyu restart yapinca cronjob calisiyor.
+7- ports.conf, hosts, hostname, interface dosya haklar   775 olacak ya da 777
+8- model class icinde x_commands satirlarini guncelle

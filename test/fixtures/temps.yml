@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tempc: MyString
+  tempf: MyString
+  temph: MyString
+
+two:
+  tempc: MyString
+  tempf: MyString
+  temph: MyString

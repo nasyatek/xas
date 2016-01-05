@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <div class="box box-default">
+    <div class="box-header with-border">
+      <h3 class="box-title">Disk Info</h3>
+
+      <div class="box-tools pull-right">
+        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+      </div>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="chart-responsive">
+            <canvas id="pieChart" height="150"></canvas>
+          </div><!-- ./chart-responsive -->
+        </div><!-- /.col -->
+        <div class="col-md-4">
+          <ul class="chart-legend clearfix">
+            <i class="fa fa-circle-o text-red"></i> Disk Used Percent <br />
+            <i class="fa fa-circle-o text-aqua"></i> Disk Avail <br />
+
+          </ul>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.box-body -->
+    </div>
+  </div>
+
+    <!-- ChartJS 1.0.1 -->
+    <script src="Chart.min.js"></script>
+    <script>
+      var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+      var pieChart = new Chart(pieChartCanvas);
+      var PieData = [
+        {
+          value: 500,
+          color: "aqua",
+          highlight: "aqua",
+          label: "Disk Avail"
+        },
+        {
+          value: 350,
+          color: "#f56954",
+          highlight: "#f56954",
+          label: "Disk Used Percent"
+        }
+      ];
+      var pieOptions = {
+        //Boolean - Whether we should show a stroke on each segment
+        segmentShowStroke: true,
+        //String - The colour of each segment stroke
+        segmentStrokeColor: "#fff",
+        //Number - The width of each segment stroke
+        segmentStrokeWidth: 2,
+        //Number - The percentage of the chart that we cut out of the middle
+        percentageInnerCutout: 50, // This is 0 for Pie charts
+        //Number - Amount of animation steps
+        animationSteps: 100,
+        //String - Animation easing effect
+        animationEasing: "easeOutBounce",
+        //Boolean - Whether we animate the rotation of the Doughnut
+        animateRotate: true,
+        //Boolean - Whether we animate scaling the Doughnut from the centre
+        animateScale: false,
+        //Boolean - whether to make the chart responsive to window resizing
+        responsive: true,
+        // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+        maintainAspectRatio: true,
+        //String - A legend template
+      };
+      //Create pie or douhnut chart
+      // You can switch between pie and douhnut using the method below.
+      pieChart.Doughnut(PieData, pieOptions);
+
+    </script>
+
+</body>
+
+</html>

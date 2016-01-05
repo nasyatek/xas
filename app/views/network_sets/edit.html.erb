@@ -1,0 +1,16 @@
+<% content_for :content_header do %>
+    <section class="content-header">
+      <!--<h1>
+        Editing
+        <small><%= link_to t('side_menu.network_setting'), @network_set %></small>--><br/>
+
+        <ol class="breadcrumb">
+          <li><a href="/"><i class="fa fa-dashboard"></i><%= t('side_menu.home') %></a></li>
+          <li><%= link_to t('side_menu.network_setting'), network_sets_path %></li>
+          <li class="active"><%= t('menu.edit') %></li>
+        </ol>
+      </h1>
+    </section>
+<% end %>
+
+<%= render 'form' %>

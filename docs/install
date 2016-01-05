@@ -1,0 +1,22 @@
+#ADEM
+DHT11 -GEM
+template : adminlte2  https://almsaeedstudio.com/preview
+XasSet   : Global configuration settings
+XmailSet : Mail Server Settings
+XymonSet : Xymon Server Settings
+Xapachi  : Apache Server Settings
+
+
+
+
+
+#VEDAT
+#LOGIN 2 dosya, css ve image klasörü
+resimlere ait pathler css içinde
+devis session new içinde import css
+devise password new içinde.
+
+gem -
+css -
+link - css - CSS3 Login Template : http://designsparkle.com/login-form-templates/
+

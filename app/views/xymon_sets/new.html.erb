@@ -1,0 +1,15 @@
+<% content_for :content_header do %>
+    <section class="content-header">
+     <!-- <h1>New
+        <small>xymon_set</small>
+      </h1> --> <br />
+
+      <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> <%= t('side_menu.home') %></a></li>
+        <li><%= link_to t('side_menu.xymon_config'), xymon_sets_path %></li>
+        <li class="active"><%= t('side_menu.new') %></li>
+      </ol>
+    </section>
+<% end %>
+
+<%= render 'form' %>

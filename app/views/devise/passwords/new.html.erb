@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/assets/loginstyle.css">
+<div id="wrapper">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :post, :class => "login-form"}) do |f| %>
+      <div class="header">
+        <h2>Forgot your password?</h2>
+      </div>
+      <%= devise_error_messages! %>
+
+      <div class="content">
+        <%= f.label :email %><br/>
+        <%= f.email_field :email, autofocus: true, :class => "input username" %>
+      </div>
+
+      <div class="footer">
+        <%= f.submit "Send me reset password instructions" %>
+        <%= render "devise/shared/links" %>
+      </div>
+  <% end %>
+</div>

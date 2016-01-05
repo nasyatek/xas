@@ -1,0 +1,62 @@
+<% content_for :content_header do %>
+    <section class="content-header">
+      <!--	<h1><%= t('menu.listing') %>
+      <small><%= t('side_menu.servers') %></small>
+      </h1>-->  <br />
+
+      <ol class="breadcrumb">
+        <li>
+          <a href="/"><i class="fa fa-dashboard"></i><%= t('side_menu.home') %></a>
+        </li>
+        <li class="active">
+          <%= t('side_menu.servers') %>
+        </li>
+      </ol>
+    </section>
+<% end %>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-primary">
+        <div class="box-header">
+          <div class="box-tools pull-right">
+            <%= link_to new_server_path(@server), :class => 'btn btn-success' do %>
+
+                <%= t('menu.new_server') %>
+            <% end %>
+          </div>
+        </div>
+        <div class="box-body table-responsive">
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th><%= t('menu.hostname') %></th>
+              <th><%= t('menu.ip') %></th>
+              <th><%= t('menu.index_number') %></th>
+              <th><%= t('menu.status') %></th>
+              <th><%= t('menu.note') %></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <%= content_tag_for(:tr, @servers) do |server| %>
+                <td><%= server.hostname %></td>
+                <td><%= server.ip %></td>
+                <td><%= server.index_number %></td>
+                <td><%= server.status ? 'Aktif' : 'Pasif' %></td>
+                <td><%= server.note %></td>
+                <td><%= link_to '', server, :class => 'fa fa-eye' %></td>
+                <td><%= link_to '', edit_server_path(server), :class => 'fa fa-edit' %></td>
+                <td><%= link_to '', server, method: :delete, data: {confirm: 'Are you sure?'}, :class => 'fa fa-trash-o' %></td>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

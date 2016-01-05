@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+# konsoldan dosya adi, aranan string ve eklenecek string giriliyor
+input_file_name = ARGV[0]
+old_string = ARGV[1]
+rep_string = ARGV[2]
+ 
+puts "Program Starting"
+puts "Dosya : #{input_file_name}, aranan : #{old_string}, eklenecek olan :#{rep_string}"
+puts "#{input_file_name} : bu bir klasor" if (File.directory?(input_file_name))
+puts "#{input_file_name} : bu bir file " if(File.file?(input_file_name))
+puts "#{input_file_name} : nil " if(input_file_name==nil)
+ 
+beforelinecommand =false
+danger_str='+'
+file=File.open(input_file_name, 'r+')
+lines = file.readlines
+file.close
+numberline=0
+changes = false
+lines.each do |line|
+  changes = true
+  if(line.include? old_string and !line.include? rep_string)
+    line.insert(0, rep_string)
+    numberline=numberline+1
+    beforelinecommand =true
+  else
+    if (beforelinecommand and line.include? '+')
+      line.insert(0, rep_string)
+      numberline=numberline+1
+      beforelinecommand = true
+    else
+      beforelinecommand = false
+    end
+  end
+end
+ 
+# degisiklik varsa dosya yazilacak
+if changes
+  file = File.new(input_file_name,'r+')
+  lines.each do |line|
+    file.write(line)
+  end
+  file.close
+end
+puts "#{numberline} satir degistirildi"

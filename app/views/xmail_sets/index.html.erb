@@ -1,0 +1,54 @@
+<% content_for :content_header do %>
+    <section class="content-header">
+      <!--<h1>Listing
+        <small>xmail_sets</small>
+      </h1>--> <br />
+
+      <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i><%= t('side_menu.home') %></a></li>
+        <li class="active"><%= t('side_menu.mail_config') %></li>
+      </ol>
+    </section>
+<% end %>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-primary">
+        <div class="box-header">
+          <div class="box-tools pull-right">
+            <%= link_to new_xmail_set_path(@xmail_set), :class => 'btn btn-success' do %>
+
+                <%= t('side_menu.new_mail_config') %>
+            <% end %>
+          </div>
+        </div>
+        <div class="box-body table-responsive">
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th><%= t('menu.name') %></th>
+              <th><%= t('menu.value') %></th>
+              <th><%= t('menu.desc') %></th>
+              <th><%= t('menu.show') %></th>
+              <th><%= t('menu.edit') %></th>
+              <th><%= t('menu.delete') %></th>
+            </tr>
+            </thead>
+            <tbody>
+            <%= content_tag_for(:tr, @xmail_sets) do |xmail_set| %>
+                <td><%= xmail_set.name %></td>
+                <td><%= xmail_set.value %></td>
+                <td><%= xmail_set.desc %></td>
+                <td><%= link_to '', xmail_set, :class => 'fa fa-eye' %></td>
+                <td><%= link_to '', edit_xmail_set_path(xmail_set), :class => 'fa fa-edit'  %></td>
+                <td><%= link_to '', xmail_set, method: :delete, data: {confirm: 'Are you sure?'},:class => 'fa fa-trash-o' %></td>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,59 @@
+<% content_for :content_header  do %>
+<section class="content-header">
+	<!-- <h1><%= t('menu.show')%> <small><%= t('side_menu.setting')%></small></h1> --><br />
+
+	<ol class="breadcrumb">
+		<li>
+			<a href="/"><i class="fa fa-dashboard"></i> <%= t('side_menu.home')%></a>
+		</li>
+		<li>
+			<%= link_to t('side_menu.settings'), settings_path %>
+		</li>
+		<li class="active">
+          <%= t('menu.show')%>
+		</li>
+	</ol>
+</section>
+<% end %>
+
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-primary">
+				<div class="box-header">
+					<div class="box-tools pull-right">
+						<%= link_to settings_path , :class => 'btn btn-primary' do %>
+						<span class="fa fa-step-backward"></span>
+                          <%= t('menu.back')%>
+						<% end %>
+					</div>
+					<div class="box-tools pull-right">
+						<%= link_to edit_setting_path(@setting), :class => 'btn btn-primary' do %>
+						<span class="glyphicon glyphicon-pencil"></span>
+                          <%= t('menu.edit')%>
+						<% end %>
+					</div>
+				</div>
+				<div class="box-body">
+					<dl class="dl-horizontal">
+						<dt>
+							Name:
+						</dt>
+						<dd>
+							<%= @setting.name %>
+						</dd>
+
+						<dt>
+							Value:
+						</dt>
+						<dd>
+							<%= @setting.value %>
+						</dd>
+
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+

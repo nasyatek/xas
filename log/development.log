@@ -1,0 +1,1947 @@
+  [1m[36mXasSet Load (0.8ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.7ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.8ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.7ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.8ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 211.6ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (6268.2ms)
+Date: Sat, 26 Dec 2015 16:32:03 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea4e32e6b0_4fc610b998c3351@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:32:09.454281', '2015-12-26 14:32:09.454281')
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.8ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.7ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.7ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.7ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 170.5ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (6397.6ms)
+Date: Sat, 26 Dec 2015 16:34:03 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea55b8ce65_508ae8b994710d0@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:34:09.975996', '2015-12-26 14:34:09.975996')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/xas_sets/3/edit?locale=en" for 127.0.0.1 at 2015-12-26 16:35:15 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by XasSetsController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"3"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`id` = 3 LIMIT 1[0m
+  Rendered xas_sets/_form.html.erb (8.1ms)
+  Rendered xas_sets/edit.html.erb within layouts/application (12.1ms)
+  [1m[35m (2.1ms)[0m  SELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1[0m
+  Rendered layouts/_application_header.html.erb (10.0ms)
+  Rendered layouts/_application_sidebar.html.erb (2.4ms)
+  Rendered layouts/_application_footer.html.erb (0.2ms)
+Completed 200 OK in 416ms (Views: 363.9ms | ActiveRecord: 10.5ms)
+
+
+Started PATCH "/xas_sets/3?locale=en" for 127.0.0.1 at 2015-12-26 16:35:31 +0200
+Processing by XasSetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R0gzkMM2xBSIbNstTwOajP19V9QDK/AnpEqNUI+ZLqp8QzDgi4E3s0EyC/BMZAkUF0rlx8/shXPl+a15eE7M7w==", "xas_set"=>{"name"=>"TEMPERATURE", "value"=>"25", "desc"=>"Belirtilen sıcaklığın üzerinde alarm verecektir. Alarm durumu oluştuğunda mail adresinize bir mail gönderilir."}, "commit"=>"Update", "locale"=>"en", "id"=>"3"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mXasSet Load (0.6ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.7ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/xas_sets/3?locale=en
+Completed 302 Found in 402ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/xas_sets/3?locale=en" for 127.0.0.1 at 2015-12-26 16:35:31 +0200
+Processing by XasSetsController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mXasSet Load (1.0ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`id` = 3 LIMIT 1[0m
+  Rendered xas_sets/show.html.erb within layouts/application (1.3ms)
+  [1m[35m (2.3ms)[0m  SELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1[0m
+  Rendered layouts/_application_header.html.erb (5.3ms)
+  Rendered layouts/_application_sidebar.html.erb (5.1ms)
+  Rendered layouts/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 208ms (Views: 198.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/bilbakalimne.jpg" for 127.0.0.1 at 2015-12-26 16:35:32 +0200
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.7ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.7ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.7ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.6ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.1ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 176.5ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (6116.8ms)
+Date: Sat, 26 Dec 2015 16:36:02 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea5d2ade2b_511ec979948056f@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:36:08.829390', '2015-12-26 14:36:08.829390')
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mXasSet Load (0.6ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.6ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (1.0ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.8ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.8ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.9ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.1ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 183.6ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (1124.0ms)
+Date: Sat, 26 Dec 2015 16:38:03 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea64bd15a7_518af17994998fb@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:38:04.981660', '2015-12-26 14:38:04.981660')
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/xas_sets/3/edit?locale=en" for 127.0.0.1 at 2015-12-26 16:39:08 +0200
+Processing by XasSetsController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"3"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mXasSet Load (0.6ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`id` = 3 LIMIT 1[0m
+  Rendered xas_sets/_form.html.erb (2.8ms)
+  Rendered xas_sets/edit.html.erb within layouts/application (4.9ms)
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1[0m
+  Rendered layouts/_application_header.html.erb (7.8ms)
+  Rendered layouts/_application_sidebar.html.erb (2.2ms)
+  Rendered layouts/_application_footer.html.erb (0.0ms)
+Completed 200 OK in 204ms (Views: 183.6ms | ActiveRecord: 9.3ms)
+  [1m[36mXasSet Load (0.8ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.5ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.6ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.7ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.6ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.7ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 170.7ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (1205.6ms)
+Date: Sat, 26 Dec 2015 16:40:02 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea6c2b7a1c_522511879907594@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:40:03.961119', '2015-12-26 14:40:03.961119')
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[36mXasSet Load (0.8ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (3.3ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (2.8ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (2.0ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.7ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.7ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 169.3ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (6113.1ms)
+Date: Sat, 26 Dec 2015 16:42:02 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea73ab0a40_5288d8f98c969dd@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:42:08.840252', '2015-12-26 14:42:08.840252')
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.6ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (1.0ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.8ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (1.0ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 167.3ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (1461.2ms)
+Date: Sat, 26 Dec 2015 16:44:03 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea7b3959ed_53471289988579c@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:44:05.077975', '2015-12-26 14:44:05.077975')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/welcome/monitor?locale=en" for 127.0.0.1 at 2015-12-26 16:44:22 +0200
+Processing by WelcomeController#monitor as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered welcome/monitor.html.erb within layouts/application (0.3ms)
+  [1m[36m (2.3ms)[0m  [1mSELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1
+  Rendered layouts/_application_header.html.erb (4.4ms)
+  Rendered layouts/_application_sidebar.html.erb (1.5ms)
+  Rendered layouts/_application_footer.html.erb (0.0ms)
+Completed 200 OK in 165ms (Views: 159.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/welcome/monitor?locale=en" for 127.0.0.1 at 2015-12-26 16:44:41 +0200
+Processing by WelcomeController#monitor as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered welcome/monitor.html.erb within layouts/application (0.0ms)
+  [1m[35m (2.4ms)[0m  SELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1[0m
+  Rendered layouts/_application_header.html.erb (4.6ms)
+  Rendered layouts/_application_sidebar.html.erb (1.5ms)
+  Rendered layouts/_application_footer.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 150.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/console/index?locale=en" for 127.0.0.1 at 2015-12-26 16:44:42 +0200
+Processing by ConsoleController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered console/index.html.erb within layouts/application (7.7ms)
+  [1m[36m (2.3ms)[0m  [1mSELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1
+  Rendered layouts/_application_header.html.erb (4.8ms)
+  Rendered layouts/_application_sidebar.html.erb (2.8ms)
+  Rendered layouts/_application_footer.html.erb (0.0ms)
+Completed 200 OK in 189ms (Views: 184.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/welcome/alarms" for 127.0.0.1 at 2015-12-26 16:45:39 +0200
+Processing by WelcomeController#alarms as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (3.5ms)[0m  SELECT `temps`.* FROM `temps` WHERE (`temps`.`mark` = 1 OR `temps`.`mark` IS NULL)  ORDER BY created_at DESC
+  Rendered welcome/alarms.html.erb within layouts/application (1.6ms)
+  [1m[36m (2.3ms)[0m  [1mSELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `temps` WHERE `temps`.`mark` = 1
+  Rendered layouts/_application_header.html.erb (4.5ms)
+  Rendered layouts/_application_sidebar.html.erb (2.7ms)
+  Rendered layouts/_application_footer.html.erb (0.2ms)
+Completed 200 OK in 178ms (Views: 165.1ms | ActiveRecord: 7.3ms)
+  [1m[36mXasSet Load (0.8ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.6ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.8ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.7ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.6ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.8ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 166.5ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (1159.2ms)
+Date: Sat, 26 Dec 2015 16:46:02 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea82ac9fa7_53d3e299884245f@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:46:03.995931', '2015-12-26 14:46:03.995931')
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[36mXasSet Load (0.8ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.7ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.8ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.8ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.7ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.8ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 162.9ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (1115.5ms)
+Date: Sat, 26 Dec 2015 16:48:02 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea8a2af328_546c88f98c83852@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:48:03.837534', '2015-12-26 14:48:03.837534')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2015-12-26 16:48:54 +0200
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Processing by WelcomeController#dashboard as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mTodoList Load (0.8ms)[0m  SELECT  `todo_lists`.* FROM `todo_lists`  ORDER BY `todo_lists`.`id` DESC LIMIT 6
+  [1m[36mXasSet Load (0.9ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.7ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXasSet Load (0.6ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.5ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.7ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.5ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.6ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.6ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 175.4ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (1120.9ms)
+Date: Sat, 26 Dec 2015 16:50:04 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea91c16335_551363198867269@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:50:05.211684', '2015-12-26 14:50:05.211684')
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.6ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.8ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.7ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.6ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.1ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 246.7ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (1191.7ms)
+Date: Sat, 26 Dec 2015 16:52:03 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567ea993a5c37_560e4fb988371d@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:52:04.870330', '2015-12-26 14:52:04.870330')
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[36mXasSet Load (0.7ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.6ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.6ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.9ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.6ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.8ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 201.6ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (6157.3ms)
+Date: Sat, 26 Dec 2015 16:54:04 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567eaa0c14527_5697121798c962c2@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:54:10.245658', '2015-12-26 14:54:10.245658')
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mXasSet Load (0.8ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'TEMPERATURE'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mTemp Load (0.7ms)[0m  SELECT  `temps`.* FROM `temps`  ORDER BY `temps`.`id` DESC LIMIT 1
+  [1m[36mXasSet Load (0.6ms)[0m  [1mSELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'PASS'  ORDER BY `xas_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.5ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mXmailSet Load (0.7ms)[0m  [1mSELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_SENDER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXmailSet Load (0.6ms)[0m  SELECT  `xmail_sets`.* FROM `xmail_sets` WHERE `xmail_sets`.`name` = 'MAIL_RECEIVER_ADDRESS'  ORDER BY `xmail_sets`.`id` ASC LIMIT 1
+  [1m[36mNetworkSet Load (0.7ms)[0m  [1mSELECT  `network_sets`.* FROM `network_sets`  ORDER BY `network_sets`.`id` ASC LIMIT 1[0m
+  [1m[35mXasSet Load (0.7ms)[0m  SELECT  `xas_sets`.* FROM `xas_sets` WHERE `xas_sets`.`name` = 'COMPANY'  ORDER BY `xas_sets`.`id` ASC LIMIT 1
+  Rendered sensor_mailer/sensor_cannot_read_email.html.erb within layouts/mailer (1.0ms)
+
+SensorMailer#sensor_cannot_read_email: processed outbound mail in 170.9ms
+
+Sent mail to ahicdurmaz@tersan.com.tr (1041.9ms)
+Date: Sat, 26 Dec 2015 16:56:03 +0200
+From: xas@nasyatek.com
+To: ahicdurmaz@tersan.com.tr
+Message-ID: <567eaa83996_56fe5fb98c817e2@ay.mail>
+Subject: NSY:Xaspian: Sensor Values Cannot Read
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+  <title>NSY-XASPIAN</title>
+  <style type="text/css">
+
+    body {
+      background-color: #328db0;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 0px;
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    div {
+      background: #fff;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 0px;
+      color: #666633;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .temp {
+      background: #ff1a1a;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .hum {
+      background: #00C0EF;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+
+    .info {
+      background: #F39C12;
+      margin: 0 auto;
+      width: 400px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      /* border-radius */
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /* box-shadow */
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+      box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    }
+  </style>
+</head>
+  <body>
+    <div>
+  <h1>Sensor Cannot Read</h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> No Data</strong></p>
+</div>
+<br>
+  </body>
+</html>
+
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `temps` (`mark`, `created_at`, `updated_at`) VALUES (0, '2015-12-26 14:56:04.046683', '2015-12-26 14:56:04.046683')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-31 21:21:35 +0200
+
+Mysql2::Error (Can't connect to MySQL server on '10.0.0.40' (101)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/ay/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/ay/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.8) lib/eventmachine.rb:193:in `run_machine'
+  eventmachine (1.0.8) lib/eventmachine.rb:193:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.0) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ay/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.9ms)

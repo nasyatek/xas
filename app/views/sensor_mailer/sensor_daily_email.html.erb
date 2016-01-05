@@ -1,0 +1,15 @@
+<div>
+  <h1><%= t('mailer.daily_notification') %></h1>
+</div>
+<br>
+<br>
+
+<div class="temp">
+  <p><strong><%= t('mailer.temperature') %>&nbsp;:&nbsp;<%= @tempSensor.tempc %>&#176;</strong></p>
+</div>
+<br>
+
+<div class="hum">
+  <p><strong> <%= t('mailer.humidity') %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<%= @tempSensor.temph %>
+    %</strong></p>
+</div>

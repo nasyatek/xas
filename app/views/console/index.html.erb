@@ -1,0 +1,265 @@
+<!-- Main content    -->
+<section class="content">
+  <div class="row">
+    <!-- Application buttons -->
+    <div class="box">
+      <div class="box-header">
+        <h3 class="box-title"> <%= t('side_menu.console_screen') %></h3>
+      </div>
+      <div class="box-body" align="center">
+        <a class="btn btn-app" onclick="recreate_xas_host_file()">
+          <i class="fa fa-edit"></i> <%= t('side_menu.recreate_xymon_config_file') %>
+          <%= javascript_tag do %>
+              function recreate_xas_host_file() {
+              $.post('/ajax/recreate_xas_host_file.json', {
+              }, function(data) {
+              var textareaLog = document.getElementById('textAreaLog');
+              textareaLog.innerHTML = textareaLog.value+" \n "+data.result
+              textareaLog.scrollTop = textareaLog.scrollHeight;
+              });
+              }
+          <% end %>
+        </a>
+        <a class="btn btn-app" onclick="recreate_apache_config()">
+          <i class="fa fa-edit"></i> <%= t('side_menu.recreate_apache_config_file') %>
+          <%= javascript_tag do %>
+              function recreate_apache_config() {
+              $.post('/ajax/recreate_apache_config.json', {
+              }, function(data) {
+              var textareaLog = document.getElementById('textAreaLog');
+              textareaLog.innerHTML = textareaLog.value+" \n "+data.result
+              textareaLog.scrollTop = textareaLog.scrollHeight;
+              });
+              }
+          <% end %>
+        </a>
+        <a class="btn btn-app" onclick="stop_all_system()">
+          <i class="fa fa-pause"></i> <%= t('side_menu.stop_all_system') %>
+          <%= javascript_tag do %>
+              function stop_all_system() {
+              $.post('/ajax/stop_all_system.json', {
+              }, function(data) {
+              var textareaLog = document.getElementById('textAreaLog');
+              textareaLog.innerHTML = textareaLog.value+" \n "+data.result
+              textareaLog.scrollTop = textareaLog.scrollHeight;
+              });
+              }
+          <% end %>
+        </a>
+        <a class="btn btn-app" onclick="start_all_system()">
+          <i class="fa fa-play"></i> <%= t('side_menu.start_all_system') %>
+          <%= javascript_tag do %>
+              function start_all_system() {
+              $.post('/ajax/start_all_system.json', {
+              }, function(data) {
+              var textareaLog = document.getElementById('textAreaLog');
+              textareaLog.innerHTML = textareaLog.value+" \n "+data.result
+              textareaLog.scrollTop = textareaLog.scrollHeight;
+              });
+              }
+          <% end %>
+        </a>
+      </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+  </div>
+
+  <div class="box box-solid box-info" align="center">
+    <textarea class="textarea-log" rows="3" cols="80" id="textAreaLog"></textarea></div>
+
+  <!-- /. row -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-primary">
+        <div class="box-header">
+          <i class="fa fa-edit"></i>
+
+          <h3 class="box-title"> <%= t('side_menu.advanced') %></h3>
+        </div>
+        <div class="box-body pad table-responsive">
+
+          <table class="table table-bordered text-center">
+            <tr>
+              <td>
+                <label><%= t('side_menu.apache') %></label>
+              </td>
+              <td>
+                <button class="btn btn-block btn-success fa fa-play" onclick="apache_start()"> <%= t('side_menu.start') %></button>
+                <%= javascript_tag do %>
+                    function apache_start() {
+                    $.post('/ajax/apache_start.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-info fa fa-stop" onclick="apache_stop()"> <%= t('side_menu.stop') %></button>
+                <%= javascript_tag do %>
+                    function apache_stop() {
+                    $.post('/ajax/apache_stop.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-danger fa fa-refresh" onclick="apache_restart()"> <%= t('side_menu.restart') %></button>
+                <%= javascript_tag do %>
+                    function apache_restart() {
+                    $.post('/ajax/apache_restart.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-danger fa fa-bullseye" onclick="apache_status()"> <%= t('side_menu.status') %></button>
+                <%= javascript_tag do %>
+                    function apache_status() {
+                    $.post('/ajax/apache_status.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><%= t('side_menu.xymon') %></label>
+              </td>
+              <td>
+                <button class="btn btn-block btn-success fa fa-play" onclick="xymon_start()"> <%= t('side_menu.start') %></button>
+                <%= javascript_tag do %>
+                    function xymon_start() {
+                    $.post('/ajax/xymon_start.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-info fa fa-stop" onclick="xymon_stop()"> <%= t('side_menu.stop') %></button>
+                <%= javascript_tag do %>
+                    function xymon_stop() {
+                    $.post('/ajax/xymon_stop.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-danger fa fa-refresh" onclick="xymon_restart()"> <%= t('side_menu.restart') %></button>
+                <%= javascript_tag do %>
+                    function xymon_restart() {
+                    $.post('/ajax/xymon_restart.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-danger fa fa-bullseye" onclick="xymon_status()"> <%= t('side_menu.status') %></button>
+                <%= javascript_tag do %>
+                    function xymon_status() {
+                    $.post('/ajax/xymon_status.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><%= t('side_menu.postfix') %></label>
+              </td>
+              <td>
+                <button class="btn btn-block btn-success fa fa-play" onclick="postfix_start()"> <%= t('side_menu.start') %></button>
+                <%= javascript_tag do %>
+                    function postfix_start() {
+                    $.post('/ajax/postfix_start.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-info fa fa-stop" onclick="postfix_stop()"> <%= t('side_menu.stop') %></button>
+                <%= javascript_tag do %>
+                    function postfix_stop() {
+                    $.post('/ajax/postfix_stop.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-danger fa fa-refresh" onclick="postfix_restart()"> <%= t('side_menu.restart') %></button>
+                <%= javascript_tag do %>
+                    function postfix_restart() {
+                    $.post('/ajax/postfix_restart.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+              <td>
+                <button class="btn btn-block btn-danger fa fa-bullseye" onclick="postfix_status()"> <%= t('side_menu.status') %></button>
+                <%= javascript_tag do %>
+                    function postfix_status() {
+                    $.post('/ajax/postfix_status.json', {
+                    }, function(data) {
+                    var textAreaLog = document.getElementById('textAreaLog');
+                    textAreaLog.innerHTML = textAreaLog.value+" \n "+data.result
+                    textAreaLog.scrollTop = textAreaLog.scrollHeight;
+                    });
+                    }
+                <% end %>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- /.box -->
+      </div>
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- ./row -->
+</section><!-- /.content -->
+

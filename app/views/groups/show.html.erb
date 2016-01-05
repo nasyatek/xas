@@ -1,0 +1,73 @@
+<% content_for :content_header  do %>
+<section class="content-header">
+  <br />
+	<!--<h1><%= t('menu.show')%> <small><%= t('side_menu.group')%></small></h1> -->
+
+	<ol class="breadcrumb">
+		<li>
+			<a href="/"><i class="fa fa-dashboard"></i> <%= t('side_menu.home')%></a>
+		</li>
+		<li>
+			<%= link_to t('side_menu.groups'), groups_path %>
+		</li>
+		<li class="active">
+          <%= t('menu.show')%>
+		</li>
+	</ol>
+</section>
+<% end %>
+
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-primary">
+        <!--<div class="box-header">
+          <div class="box-tools pull-right">
+
+          </div>
+          <div class="box-tools pull-right">
+
+          </div>
+
+        </div>-->
+				<div class="box-body">
+					<dl class="dl-horizontal">
+						<dt>
+              <%= t('menu.name') %>:
+						</dt>
+						<dd>
+							<%= @group.name %>
+						</dd>
+						<dt>
+              <%= t('menu.index_number') %>:
+						</dt>
+						<dd>
+							<%= @group.index_number %>
+						</dd>
+						<dt>
+              <%= t('menu.status') %>:
+						</dt>
+						<dd>
+							<%= @group.status ? t('menu.active') : t('menu.passive')%>
+						</dd>
+            <br>
+            <dt>
+              <%= link_to edit_group_path(@group), :class => 'btn btn-primary' do %>
+
+                  <%= t('menu.edit') %>
+              <% end %>
+            </dt>
+            <dd>
+              <%= link_to groups_path, :class => 'btn btn-primary' do %>
+
+                  <%= t('menu.back') %>
+              <% end %>
+            </dd>
+
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
