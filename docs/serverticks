@@ -1,0 +1,26 @@
+pi@xaspian ~ $ cat updatecronjob
+#!/bin/bash
+# Nas.._
+cd /home/pi/apps/xas
+pwd
+whenever --update-crontab
+pi@xaspian ~ $ cat xaspian
+#!/bin/bash
+# NASYATEK
+sudo /etc/init.d/apache2 restart
+/var/www/server/xymon.sh restart
+pi@xaspian ~ $
+pi@xaspian ~/apps $ cat tips
+1- Clone ile projeyi aldiktan sonra gemfile icinde dht_sensor gemini aktif et
+2- db:setup yap
+3- whenever --update-crontab   ile guncelle
+4- crontab -l ıile listeyi kontrol et
+5- Mail gelmiyorsa, cron.log dosyasina bak, eger normalse mail beklenen degerler icinde oldugu icin gelmiyor olabilir. Test icin yuksek konuma al.
+6- Bazi durumlarda sunucuyu restart yapinca cronjob calisiyor.
+7- ports.conf, hosts, hostname, interface dosya hakları 775 olacak ya da 777
+8- model class icinde x_commands satirlarini guncelle
+pi@xaspian ~/apps $
+pi@xaspian /sens/dht11 $ ls
+dht11  rubytemp
+pi@xaspian /sens/dht11 $
+
